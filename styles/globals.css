@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============= Modal Common Css ============ */
+.modal-mask {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  user-select: none;
+}
+.modal-mask::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 100%;
+  width: 0;
+  margin-left: -0.25em;
+}
+.modal-mask .modal-dialog {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  width: 600px;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  max-height: calc(100vh - 200px);
+  user-select: text;
+}
+.modal-mask .modal-dialog .modal-close {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+.modal-mask .modal-dialog .modal-close:hover svg path {
+  fill: #df0606;
+}
+.modal-mask .modal-dialog .modal-close svg {
+  width: 16px;
+  height: 16px;
+}
+.modal-mask .modal-dialog .modal-close svg path {
+  transition: all 0.3s linear;
+  fill: #a3a3a3;
+}
+.modal-mask .modal-dialog .modal-title {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3b3b3b;
+  width: calc(100% - 24px);
+  margin-bottom: 16px;
+}
+.modal-mask .modal-dialog .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ============= End Modal Common Css ============ */
+/* ============= Modal Center Fade Zoom Css ============ */
+.modal-mask .fui-modal-center-fade-zoom.modal-dialog {
+  transition: transform 0.4s ease, opacity 0.4s linear;
+  transform: scale(0);
+  opacity: 0;
+}
+.modal-mask .fui-modal-center-fade-zoom.modal-dialog.is-open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ============= End Modal Center Fade Zoom Css ============ */
+/* ============= Button Css ============ */
+.btn {
+  margin-top: 20px;
+  padding-inline: 20px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  background-color: #307dca;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  outline: none;
+  border: none;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+/* ============= End Button Css ============ */
+/* ============= Responsive ============ */
+@media only screen and (max-width: 39.9375em) {
+  .modal-mask .modal-dialog {
+    width: 100%;
+    max-width: calc(100vw - 32px);
+  }
+}
+/* ============= End Responsive ============ */
+
+/*# sourceMappingURL=app.css.map */
