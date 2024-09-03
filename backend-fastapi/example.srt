@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:01,500
+This an example subtitle
+
+2
+00:00:01,600 --> 00:00:02,500
+<i>Italic style</i>
+
+3
+00:00:03,000 --> 00:00:15,000
+Video by Tiger Lily on pexels.com
