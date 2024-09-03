@@ -80,7 +80,7 @@ export default function Footer() {
                     Detects and focuses on active speakers
                     </h3>
                     <p className="text-sm text-gray-600">
-                    Ensures speakers are always centered in your video's frame,
+                    Ensures speakers are always centered in your videos frame,
                     enhancing your viewer experience.
                     </p>
                 </div>
