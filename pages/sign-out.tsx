@@ -16,7 +16,7 @@ export default function SignOutPage() {
       <main className="flex-grow flex items-center justify-center px-4">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Are you sure you want to sign out?</h1>
-          <SignOutButton signOutCallback={() => router.push("/")}>
+          <SignOutButton>
             <Button className="bg-black text-white font-medium px-4 py-2 hover:bg-black/80">
               Sign Out
             </Button>
