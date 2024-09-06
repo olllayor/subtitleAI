@@ -87,9 +87,7 @@ export default function Footer() {
                     </p>
                 </div>
                 </div>
-                <div className="mt-8 text-center">
                 
-                </div>
             </footer>
     )
 }

@@ -21,14 +21,15 @@ export default function Demo() {
   return (
     <>
       <Head>
-        <title>Try Video Subtitle Tool - SubtitleAI</title>
+        <title>SubtitleAI</title>
       </Head>
       <div className='flex flex-col items-center justify-center px-4 mt-10'>
-        <h1 className='text-4xl font-bold mb-8'>Try Our Video Subtitle Tool</h1>
+        <h1 className='text-4xl font-bold mb-8'>Try Our Video Subtitle Tool [Beta]</h1>
         <div className='w-full max-w-4xl mx-auto'>
           <VideoSubtitleTool />
-        </div>
+        </div>        
       </div>
+      
     </>
   );
 }

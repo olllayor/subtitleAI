@@ -16,7 +16,7 @@ export default function Component() {
                   alt="Original video without subtitles"
                   width={900}
                   height={1350}
-                  src="/original.gif"
+                  src="https://media.giphy.com/media/muIbRAk8tGmrZVdsUw/giphy.gif"
                   className="w-full h-auto rounded-2xl"
                 />
               </div>
@@ -34,7 +34,7 @@ export default function Component() {
                   alt="Video with AI-generated subtitles"
                   width={900}
                   height={1350}
-                  src="/subtitle.gif"
+                  src="https://media.giphy.com/media/9Yoj7DpscIsb1bWLu2/giphy.gif"
                   className="w-full h-auto rounded-2xl"
                 />
               </div>

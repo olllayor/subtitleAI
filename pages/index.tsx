@@ -3,12 +3,23 @@ import Link from "next/link";
 import { Button } from "../components/ui/button";
 import VideoComparison from "../components/VideoComparison";
 import Ads from "../components/Ads";
+import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
+import { Redis } from "@upstash/redis";
+import Footer from '../components/Footer';
+
+
+const redis = Redis.fromEnv();
+
+export const getServerSideProps = (async () => {
+  const count = await redis.incr("counter");
+  return { props: { count } }
+}) satisfies GetServerSideProps<{ count: number }>
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Video Subtitle Tool</title>
+        <title>SubtitleAI</title>
       </Head>
       <div className="flex flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20">
         <a
@@ -56,6 +67,8 @@ export default function Home() {
         <VideoComparison />        
       </div>
       <Ads />
+      <Footer />
+      
     </>
   );
 }

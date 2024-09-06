@@ -36,9 +36,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-grow">
         {children}
       </main>
-      <footer className="w-full border-t border-gray-200 py-4 text-center mt-10">
-        <p className="text-sm text-gray-500">© 2024 SubtitleAI. All rights reserved.</p>
-      </footer>
+      
     </div>
   );
 }
