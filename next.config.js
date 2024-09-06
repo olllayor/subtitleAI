@@ -11,21 +11,21 @@ const nextConfig = {
         source: "/api/:path*",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/api/:path*"
+            ? "https://subtitle-ai-seven.vercel.app/api/:path*"
             : "/api/",
       },
       {
         source: "/docs",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/docs"
+            ? "https://subtitle-ai-seven.vercel.app/docs"
             : "/api/docs",
       },
       {
         source: "/openapi.json",
         destination:
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/openapi.json"
+            ? "https://subtitle-ai-seven.vercel.app/openapi.json"
             : "/api/openapi.json",
       },
     ];
