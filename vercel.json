@@ -1,10 +1,10 @@
 {
+    "buildCommand": "apt-get update && apt-get install -y ffmpeg && pip install -r requirements.txt",
+    "installCommand": "apt-get update && apt-get install -y ffmpeg",
     "builds": [
-      { "src": "api/main.py", "use": "@vercel/python" },
-      { "src": "package.json", "use": "@vercel/next" }
+      { "src": "api/main.py", "use": "@vercel/python" }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "api/main.py" },
-      { "src": "/(.*)", "dest": "/$1" }
+      { "src": "/(.*)", "dest": "api/main.py" }
     ]
   }
