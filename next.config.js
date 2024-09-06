@@ -1,18 +1,16 @@
-
-
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['media.giphy.com'], // Added the hostname to the images config
+    domains: ['media.giphy.com'],
   },
   rewrites: async () => {
     return [
       {
-        source: "/:path*",
-        destination:
+        source: "/api/:path*",
+        destination: 
           process.env.NODE_ENV === "development"
-            ? "http://127.0.0.1:8000/:path*"
-            : "/api/",
+            ? "http://127.0.0.1:8000/api/:path*"
+            : "/api/:path*",
       },
       {
         source: "/docs",

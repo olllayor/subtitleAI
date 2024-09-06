@@ -1,14 +1,13 @@
 {
-  "name": "frontend-nextjs",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn api.index:app --reload",
-    "next-dev": "next dev",
-    "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "name": "subtitleai",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    }
   },
   "dependencies": {
     "@clerk/nextjs": "^5.3.7",
