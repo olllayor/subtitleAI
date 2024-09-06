@@ -20,7 +20,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://subtitleai.ollayor.uz","https://*.vercel.app"],
+    allow_origins=["http://localhost:3000", "https://subtitleai.ollayor.uz","https://subtitle-ai-seven.vercel.app/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
