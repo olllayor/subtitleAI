@@ -1,6 +1,6 @@
 fastapi-cli
 openai
-uvicorn
+uvicorn[standard]==0.23.2
 pydantic
 srt
 requests
